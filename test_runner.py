@@ -88,7 +88,7 @@ class Output:
         self.color("31")
         self.append("[  FAILED  ]")
         self.reset_color()
-        self.append(" exception occured when running {}".format(name))
+        self.append(" exception occurred when running {}".format(name))
     
     def _output_stdout_stderr_mismatch(self, stdout_or_stderr: str, expected: str, actual: str):
         self.buffer += "Unexpected {} output from test.\n".format(stdout_or_stderr)
@@ -236,7 +236,7 @@ class TestRunnerThread(Thread):
                 try:
                     test.update()
                 except Exception as e:
-                    print("ERROR: exception occured when updating {}\n{}".format(test.name, str(e)))
+                    print("ERROR: exception occurred when updating {}\n{}".format(test.name, str(e)))
                 
                 RUNNER_LOCK.acquire()
                 ran_tests_count += 1
