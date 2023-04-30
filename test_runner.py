@@ -386,7 +386,7 @@ if __name__ == '__main__':
     import argparse
     
     parser = argparse.ArgumentParser(description='Test runner.')
-    parser.add_argument('dirs', nargs='*', default=['.'], help="all directories too lookup for tests")
+    parser.add_argument('dirs', nargs='*', default=['.'], help="all directories too* lookup for tests")
     parser.add_argument('--list', action='store_true', help="list the names of all tests instead of running them")
     parser.add_argument('--filter', help="run only the tests whose name matches the given regular expression")
     parser.add_argument('--threads', type=int, default=0, help="maximum number of threads to use for running tests, -1 means none, 0 means all availables cpus (default: 0)")
